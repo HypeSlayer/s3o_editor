@@ -1,5 +1,5 @@
 {
-	"name": "s3o_editor",
+	"name": "s3o-editor",
 	"displayName": "S3O Editor",
 	"description": "Handles S3O files.",
 	"version": "1.0.0",
@@ -15,6 +15,9 @@
 		"Formatters"
 	],
 	"main": "./out/extension.js",
+	"activationEvents": [
+		
+	],
 	"contributes": {
 		"customEditors": [
 			{
