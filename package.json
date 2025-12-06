@@ -1,0 +1,51 @@
+{
+	"name": "s3o_editor",
+	"displayName": "S3O Editor",
+	"description": "Handles S3O files.",
+	"version": "1.0.0",
+	"publisher": "HypeSlayer",
+	"private": true,
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.100.0"
+	},
+	"categories": [
+		"Other",
+		"Visualization",
+		"Formatters"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"customEditors": [
+			{
+				"viewType": "s3o.Renderer",
+				"displayName": "S3O render",
+				"selector": [
+					{
+						"filenamePattern": "*.s3o"
+					}
+				],
+				"priority": "default"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint",
+		"watch": "tsc -w -p ./"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.13.0",
+		"@stylistic/eslint-plugin": "^2.9.0",
+		"@types/node": "^22",
+		"@types/vscode": "^1.100.0",
+		"eslint": "^9.13.0",
+		"typescript": "^5.9.2",
+		"typescript-eslint": "^8.39.0"
+	},
+	"dependencies": {
+		"dds-ktx-parser": "^1.0.1",
+		"image-in-browser": "^3.2.5"
+	}
+}
